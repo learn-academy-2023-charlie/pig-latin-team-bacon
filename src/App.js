@@ -32,14 +32,26 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+      
+      // Story 1 pseudocode ->
       // input: string
       // output: string
       // words begininning with vowel, add "way" to the end
+      // in the `vowelsArray`use the built in method `.includes`to include the eachWord that has the first index with a vowel
+      // return the words that begin with a vowel plus the string "way".
 
-
+      // Story 2 pseudocode ->
+      // input: string
+      // output: string
+      // words begininning with `qu`, move the consonant and the `u` to the end and add "ay".
+      // use the `.slice` built in method to slice `eachWord` making a subset of the "0,1" indexes.
+      // return the remainder of the string starting at the second index plus the string `quay`.
+      
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
-    if (vowelsArray.includes(eachWord[0])) {
-      return eachWord + "way";
+      if (vowelsArray.includes(eachWord[0])) {
+        return eachWord + "way"; }
+      else if (eachWord.slice(0, 2) === 'qu') {
+        return eachWord.slice(2) + 'quay';
     }
     })
 
