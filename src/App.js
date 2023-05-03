@@ -43,32 +43,39 @@ const App = () => {
       // Story 2 pseudocode ->
       // input: string
       // output: string
-      // words begininning with `qu`, move the consonant and the `u` to the end and add "ay".
+      // words beginning with `qu`, move the consonant and the `u` to the end and add "ay".
       // use the `.slice` built in method to slice `eachWord` making a subset of the "0,1" indexes.
       // return the remainder of the string starting at the second index plus the string `quay`.
 
       // Story 3 pseudocode ->
-      // input: string
-      // output: string
+      // input: string 
+      // output: string that has 
       // words that have no vowels other than "y" translated by moving all the consonant to the end and add "ay".
       // .include on eachWord to check if the word includes the letter y
       // created a new variable called consonant 
       // use the `.slice` built in method to slice `eachWord` with the starting index of 0 and ending in the index that includes the letter y.
       // return the "y" + consonant + "ay" to translate the word to pig latin. Which is our main goal!!
 
-      
+
+      // Story 4 pseudocode ->
+      // input: string
+      // output: words with vowals at front and consonants at the end + 'ay'
+
+
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       if (vowelsArray.includes(eachWord[0])) {
         return eachWord + "way"; }
-      else if (eachWord.slice(0, 2) === 'qu') {
-        return eachWord.slice(2) + 'quay';
-      }
+        else if (eachWord.slice(0, 2) === 'qu') {
+          return eachWord.slice(2) + 'quay';
+        }
       // yfray took everything in fornt of y and moved it the back and added ay
       else if (eachWord.includes("y")) {
         const consonant = eachWord.slice(0,eachWord.indexOf("y"))
         return "y" + consonant + "ay"
+    } else {
+      return eachWord + "ay"
     }
-  
+    
     })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
